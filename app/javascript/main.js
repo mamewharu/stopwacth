@@ -40,7 +40,12 @@
   },10);
   }
 
-  start.addEventListener('click', function(){
+  start.addEventListener('click',function(){
+    startTime = Date.now();
+    countUp();
+  });
+
+  stop.addEventListener('click', function(){
     clearTimeout(timerId);
     timeToadd += Date.now() - startTime;
   });
